@@ -1,13 +1,153 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+    <head>
 
-<h1>My First Heading</h1>
-<p>My first paragraph. Hello Santi!</p>
+        <title>STA304</title>
 
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <style type="text/css">
+
+            hr.style18:before {
+                display: block;
+                content: "";
+                height: 30px;
+                margin-top: -31px;
+                border-style: solid;
+                border-color: snow;
+                border-width: 0 0 1px 0;
+                border-radius: 20px;
+            }
+
+            .radioControl {
+                color: deepskyblue;
+                top: 2px;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                background: deepskyblue;
+            }
+
+            hr.style13 {
+                height: 10px;
+                border: 0;
+                box-shadow: 0 10px 10px -10px snow inset;
+            }
+
+
+
+            body {
+                background: #00c6ff; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                font-family: helvetica, sans-serif;
+                font-size: 200%;
+            }
+
+            h3 {
+                font-family: "Liberation Sans";
+                text-align: center;
+                color: snow;
+                font-size: 250%;
+
+
+            }
+
+            input {
+                padding: 5px 5px 12px 5px;
+                font-size: 40px;
+                border-radius: 5px;
+                border: 1px solid snow;
+                width: 500px;
+
+            }
+
+            label {
+                font-size: 200%;
+                color: snow;
+            }
+
+            #wrapper {
+                width: 1000px;
+                margin: 0 auto;
+            }
+        </style>
+
+
+
+
+    </head>
+    <body>
+
+        <h3>STA304 PROJECT SURVEY</h3>
+        <hr class="style13">
+
+        <div id="wrapper">
+            <label for="fullName">Enter Your Name!</label><br>
+            <input type="text" name="fullName" id="fullName" placeholder="eg. FirstName LastName">
+            <br>
+            <hr class="style18">
+            <br>
+
+
+            <label>Indicate Your Year of Undergraduate Study!</label> <br> <br>&nbsp;
+
+            <label for="year1Radio">1</label> &emsp;&emsp;&emsp;
+            <label for="year2Radio">2</label> &emsp;&emsp;&emsp;
+            <label for="year3Radio">3</label> &emsp;&emsp;&emsp;
+            <label for="year4Radio">4</label> &emsp;&emsp;&emsp;
+            <label for="yearMoreRadio">4+</label> <br>
+
+            <input type="radio" id="year1Radio" value="1" name="year1Radio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="year2Radio" value="2" name="year2Radio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
+            <input type="radio" id="year3Radio" value="3" name="year3Radio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="year4Radio" value="4" name="year4Radio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="yearMoreRadio" value="5" name="yearMoreRadio" class="radioControl">
+
+
+
+
+
+            <script type="text/javascript">
+
+//                if( $("year1Radio").prop("checked", false) ) {
+//                    alert("Hi")
+////                    $(year2Radio).checked = false
+////                    $(year3Radio).checked = false
+////                    $(year4Radio).checked = false
+////                    $(yearMoreRadio).checked = false
+//                }
+
+                var mouseY = 0;
+                var startMouseY = 0;
+                $('body').on('mousedown', function (ev) {
+                    mouseY = ev.pageY;
+                    startMouseY = mouseY;
+                    $(document).mousemove(function (e) {
+                        if (e.pageY > mouseY) {
+                            var d = e.pageY - startMouseY;
+                            console.log("d: " + d);
+                            if (d >= 200)
+                                location.reload();
+                            $('body').css('margin-top', d/4 + 'px');
+                        }
+                        else
+                            $(document).unbind("mousemove");
+
+
+                    });
+                });
+                $('body').on('mouseup', function () {
+                    $('body').css('margin-top', '0px');
+                    $(document).unbind("mousemove");
+                });
+                $('body').on('mouseleave', function () {
+                    $('body').css('margin-top', '0px');
+                    $(document).unbind("mousemove");
+                });
+
+
+            </script>
+        </div>
+    </body>
 </html>
-
