@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <title>STA305</title>
+        <title>STA304</title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
@@ -93,11 +93,11 @@
         <hr class="style13">
 
         <div id="wrapper">
-            <label for="fullName">Enter Your Name!</label><br>
+            <!-- <label for="fullName">Enter Your Name!</label><br>
             <input type="text" name="fullName" id="fullName" placeholder="eg. FirstName LastName">
             <br>
             <hr class="style18">
-            <br>
+            <br> -->
 
 
             <label>Indicate Your Year of Undergraduate Study!</label> <br> <br>&nbsp;
@@ -236,7 +236,6 @@
 
             $('#submitButton').click(function() {
 
-                var name =  $("#fullName").val()
                 var year = parseInt($("input[name=yearRadio]:radio:checked").val(), 10)
                 var year1T = parseInt($("input[name=year1TRadio]:radio:checked").val(), 10)
                 var year2T = parseInt($("input[name=year2TRadio]:radio:checked").val(), 10)
@@ -253,7 +252,7 @@
                 var fullU = $("#fullUpass").val()
                 var summerU = $("#sumUpass").val()
 
-                alert(name + ", " + year +", " +  year1T +", " +  year2T +", " +
+                alert(year +", " +  year1T +", " +  year2T +", " +
                 year3T +", " +  year4T +", " +  year5T +", " +
                 year1U + ", " + year2U + ", " + year3U +", " +  year4U +", " +  year5U
                 +", " +  fullU +", " +  summerU)
