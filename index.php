@@ -93,12 +93,6 @@
         <hr class="style13">
 
         <div id="wrapper">
-            <!-- <label for="fullName">Enter Your Name!</label><br>
-            <input type="text" name="fullName" id="fullName" placeholder="eg. FirstName LastName">
-            <br>
-            <hr class="style18">
-            <br> -->
-
 
             <!-- <label>You are invited to participate in a class research project lead by STA304H5 instructors Dr. Alison Weir and Dr. Luai Al Labadi.
                 <br><br>You have the right to decline to respond to any individual question on a questionnaire, or to discontinue participation at any time.
@@ -108,6 +102,11 @@
             <input type="button" name="submitButton" id="submitButton" value="I Agree to Participate">
             <br>
             <br> -->
+
+            <label>Enter your year of Undergraduate Study</label>
+            <br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
             <label for="yearRadio">1</label> &emsp;&emsp;&emsp;
             <label for="yearRadio">2</label> &emsp;&emsp;&emsp;
