@@ -41,7 +41,7 @@
                 background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
                 background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 font-family: helvetica, sans-serif;
-                font-size: 200%;
+                font-size: 100%;
             }
 
             h3 {
@@ -100,7 +100,14 @@
             <br> -->
 
 
-            <label>Indicate Your Year of Undergraduate Study!</label> <br> <br>&nbsp;
+            <!-- <label>You are invited to participate in a class research project lead by STA304H5 instructors Dr. Alison Weir and Dr. Luai Al Labadi.
+                <br><br>You have the right to decline to respond to any individual question on a questionnaire, or to discontinue participation at any time.
+                <br><br>Your data is completely confidential and no identification information will be collected in this survey. All data will be destroyed at the conclusion of the course.
+            </label> <br> <br>&nbsp;
+
+            <input type="button" name="submitButton" id="submitButton" value="I Agree to Participate">
+            <br>
+            <br> -->
 
             <label for="yearRadio">1</label> &emsp;&emsp;&emsp;
             <label for="yearRadio">2</label> &emsp;&emsp;&emsp;
