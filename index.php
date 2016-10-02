@@ -256,7 +256,8 @@
                 <hr class="style18">
                 <br>
 
-                <input type="button" name="submitButton" id="submitButton" value="Submit Information">
+                <button type="submit" id="submit" class="btn btn-primary">Submit Information</button>
+
 
 
             </div>
@@ -264,7 +265,7 @@
 
         <script type="text/javascript">
 
-            $('#submitButton').click(function() {
+            $("form").submit({
 
                 var year = parseInt($("input[name=yearRadio]:radio:checked").val(), 10)
                 var year1T = parseInt($("input[name=year1TRadio]:radio:checked").val(), 10)
