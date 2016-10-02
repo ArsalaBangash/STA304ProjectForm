@@ -1,4 +1,28 @@
-<!DOCTYPE html>
+<?php
+
+    $list = array (
+        $year,
+        $year1T,
+        $year2T,
+        $year3T,
+        $year4T,
+        $year5T,
+        $year1U,
+        $year2U,
+        $year3U,
+        $year4U,
+        $year5U,
+        $fullU,
+        $summerU
+    );
+
+    $fp = fopen('project_data.csv', 'w');
+
+    fputcsv($fp, $list);
+
+    fclose($fp);
+?>
+
 <html>
     <head>
 
@@ -94,14 +118,6 @@
 
         <div id="wrapper">
 
-            <!-- <label>You are invited to participate in a class research project lead by STA304H5 instructors Dr. Alison Weir and Dr. Luai Al Labadi.
-                <br><br>You have the right to decline to respond to any individual question on a questionnaire, or to discontinue participation at any time.
-                <br><br>Your data is completely confidential and no identification information will be collected in this survey. All data will be destroyed at the conclusion of the course.
-            </label> <br> <br>&nbsp;
-
-            <input type="button" name="submitButton" id="submitButton" value="I Agree to Participate">
-            <br>
-            <br> -->
 
             <label>Enter your year of Undergraduate Study</label>
             <br>
@@ -263,15 +279,6 @@
                 year1U + ", " + year2U + ", " + year3U +", " +  year4U +", " +  year5U
                 +", " +  fullU +", " +  summerU)
             });
-
-
-
-
-
-
-
-
-
         </script>
     </body>
 </html>
