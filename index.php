@@ -1,10 +1,6 @@
 <?php
 
     if ($_POST) {
-
-        $message = $_POST['year'];
-        echo echo "<script type='text/javascript'>alert('$message');</script>";
-
         // $list = array (
         //     $_POST['year'],
         //     $_POST['year1T'],
@@ -28,7 +24,6 @@
         //
         //
         // fclose($fp);
-
         $list = array (
         array('aaa', 'bbb', 'ccc', 'dddd'),
         array('123', '456', '789'),
