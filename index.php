@@ -3,27 +3,41 @@
     if ($_POST) {
 
 
+        // $list = array (
+        //     $_POST['year'],
+        //     $_POST['year1T'],
+        //     $_POST['year2T'],
+        //     $_POST['year3T'],
+        //     $_POST['year4T'],
+        //     $_POST['year5T'],
+        //     $_POST['year1U'],
+        //     $_POST['year2U'],
+        //     $_POST['year3U'],
+        //     $_POST['year4U'],
+        //     $_POST['year5U'],
+        //     $_POST['fullU'],
+        //     $_POST['summerU']
+        // );
+        //
+        // $fp = fopen('project_data.csv', 'w');
+        //
+        // fputcsv($fp, $list);
+        // fputcsv($fp, "Hello");
+        //
+        //
+        // fclose($fp);
+
         $list = array (
-            $_POST['year'],
-            $_POST['year1T'],
-            $_POST['year2T'],
-            $_POST['year3T'],
-            $_POST['year4T'],
-            $_POST['year5T'],
-            $_POST['year1U'],
-            $_POST['year2U'],
-            $_POST['year3U'],
-            $_POST['year4U'],
-            $_POST['year5U'],
-            $_POST['fullU'],
-            $_POST['summerU']
+        array('aaa', 'bbb', 'ccc', 'dddd'),
+        array('123', '456', '789'),
+        array('"aaa"', '"bbb"')
         );
 
-        $fp = fopen('project_data.csv', 'w');
+        $fp = fopen('file.csv', 'w');
 
-        fputcsv($fp, $list);
-        fputcsv($fp, "Hello");
-
+        foreach ($list as $fields) {
+            fputcsv($fp, $fields);
+        }
 
         fclose($fp);
     }
