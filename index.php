@@ -2,7 +2,7 @@
 
     if ($_POST) {
 
-        $message = "Hello Buddy";
+        $message = $_POST['year'];
         echo "<script type='text/javascript'>alert('$message');</script>";
         // $list = array (
         //     $_POST['year'],
