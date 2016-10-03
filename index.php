@@ -22,6 +22,8 @@
         $fp = fopen('project_data.csv', 'w');
 
         fputcsv($fp, $list);
+        fputcsv($fp, "Hello");
+
 
         fclose($fp);
     }
