@@ -1,6 +1,9 @@
 <?php
 
     if ($_POST) {
+
+        $message = "Hello Buddy";
+        echo "<script type='text/javascript'>alert('$message');</script>";
         // $list = array (
         //     $_POST['year'],
         //     $_POST['year1T'],
@@ -24,19 +27,19 @@
         //
         //
         // fclose($fp);
-        $list = array (
-        array('aaa', 'bbb', 'ccc', 'dddd'),
-        array('123', '456', '789'),
-        array('"aaa"', '"bbb"')
-        );
-
-        $fp = fopen('file.csv', 'w');
-
-        foreach ($list as $fields) {
-            fputcsv($fp, $fields);
-        }
-
-        fclose($fp);
+        // $list = array (
+        // array('aaa', 'bbb', 'ccc', 'dddd'),
+        // array('123', '456', '789'),
+        // array('"aaa"', '"bbb"')
+        // );
+        //
+        // $fp = fopen('file.csv', 'a');
+        //
+        // foreach ($list as $fields) {
+        //     fputcsv($fp, $fields);
+        // }
+        //
+        // fclose($fp);
     }
 ?>
 
