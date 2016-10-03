@@ -2,31 +2,30 @@
 
     if ($_POST) {
 
-        $message = $_POST['yearRadio'];
-        echo "<script type='text/javascript'>alert('$message');</script>";
-        // $list = array (
-        //     $_POST['year'],
-        //     $_POST['year1T'],
-        //     $_POST['year2T'],
-        //     $_POST['year3T'],
-        //     $_POST['year4T'],
-        //     $_POST['year5T'],
-        //     $_POST['year1U'],
-        //     $_POST['year2U'],
-        //     $_POST['year3U'],
-        //     $_POST['year4U'],
-        //     $_POST['year5U'],
-        //     $_POST['fullU'],
-        //     $_POST['summerU']
-        // );
-        //
-        // $fp = fopen('project_data.csv', 'w');
-        //
-        // fputcsv($fp, $list);
-        // fputcsv($fp, "Hello");
-        //
-        //
-        // fclose($fp);
+        // $message = $_POST['yearRadio'];
+        // echo "<script type='text/javascript'>alert('$message');</script>";
+        $list = array (
+            $_POST['yearRadio'],
+            $_POST['year1TRadio'],
+            $_POST['year2TRadio'],
+            $_POST['year3TRadio'],
+            $_POST['year4TRadio'],
+            $_POST['year5TRadio'],
+            $_POST['year1URadio'],
+            $_POST['year2URadio'],
+            $_POST['year3URadio'],
+            $_POST['year4URadio'],
+            $_POST['year5URadio'],
+            $_POST['fullUpass'],
+            $_POST['sumUpass']
+        );
+
+        $fp = fopen('project_data.csv', 'w');
+
+        fputcsv($fp, $list);
+
+
+        fclose($fp);
         // $list = array (
         // array('aaa', 'bbb', 'ccc', 'dddd'),
         // array('123', '456', '789'),
