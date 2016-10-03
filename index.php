@@ -2,6 +2,7 @@
 
     if ($_POST) {
 
+        echo $_POST['year'];
 
         // $list = array (
         //     $_POST['year'],
