@@ -4,19 +4,19 @@
 
 
         $list = array (
-            $year,
-            $year1T,
-            $year2T,
-            $year3T,
-            $year4T,
-            $year5T,
-            $year1U,
-            $year2U,
-            $year3U,
-            $year4U,
-            $year5U,
-            $fullU,
-            $summerU
+            $_POST['year'],
+            $_POST['year1T'],
+            $_POST['year2T'],
+            $_POST['year3T'],
+            $_POST['year4T'],
+            $_POST['year5T'],
+            $_POST['year1U'],
+            $_POST['year2U'],
+            $_POST['year3U'],
+            $_POST['year4U'],
+            $_POST['year5U'],
+            $_POST['fullU'],
+            $_POST['summerU']
         );
 
         $fp = fopen('project_data.csv', 'w');
