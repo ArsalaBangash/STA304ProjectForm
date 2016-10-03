@@ -2,7 +2,8 @@
 
     if ($_POST) {
 
-        echo $_POST['year'];
+        $message = $_POST['year'];
+        echo echo "<script type='text/javascript'>alert('$message');</script>";
 
         // $list = array (
         //     $_POST['year'],
