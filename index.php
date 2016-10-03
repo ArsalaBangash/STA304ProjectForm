@@ -2,7 +2,7 @@
 
     if ($_POST) {
 
-        $message = $_POST['year'];
+        $message = $_POST['yearRadio'];
         echo "<script type='text/javascript'>alert('$message');</script>";
         // $list = array (
         //     $_POST['year'],
