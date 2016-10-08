@@ -1,42 +1,3 @@
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
 <?php
  //http://stackoverflow.com/questions/18382740/cors-not-working-php
  if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -62,13 +23,13 @@
     $postdata = file_get_contents("php://input");
  if (isset($postdata)) {
  $request = json_decode($postdata);
- $username = $request->username;
+ $name = $request->name;
 
- if ($username != "") {
- echo "Server returns: " . $username;
+ if ($name != "") {
+ echo "Server returns: " . $name;
  }
  else {
- echo "Empty username parameter!";
+ echo "Empty name parameter!";
  }
  }
  else {
