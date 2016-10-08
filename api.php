@@ -23,13 +23,13 @@
     $postdata = file_get_contents("php://input");
  if (isset($postdata)) {
  $request = json_decode($postdata);
- $name = $request->name;
-echo print_r($request, 1));
- if ($name != "") {
- echo "Server returns: " . $name;
+ $username = $request->username;
+
+ if ($username != "") {
+ echo "Server returns: " . $username;
  }
  else {
- echo "Empty name parameter!";
+ echo "Empty username parameter!";
  }
  }
  else {
