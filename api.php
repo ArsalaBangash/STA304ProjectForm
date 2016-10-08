@@ -24,7 +24,7 @@
  if (isset($postdata)) {
  $request = json_decode($postdata);
  $name = $request->name;
-
+echo print_r($request, 1));
  if ($name != "") {
  echo "Server returns: " . $name;
  }
