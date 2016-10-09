@@ -32,16 +32,20 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
-
- if ($username != "") {
- echo "Server returns: " . $username;
- }
- else {
- echo "Empty username parameter!";
- }
- }
- else {
- echo "Not called properly with username parameter!";
- }
+if(@mail($emailRecipient, $subject, $message, $headers))
+    {
+      echo "Mail Sent Successfully";
+    }else{
+      echo "Mail Not Sent";
+    }
+ // if ($username != "") {
+ // echo "Server returns: " . $username;
+ // }
+ // else {
+ // echo "Empty username parameter!";
+ // }
+ // }
+ // else {
+ // echo "Not called properly with username parameter!";
+ // }
 ?>
