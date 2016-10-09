@@ -25,14 +25,19 @@
  $request = json_decode($postdata);
  $username = $request->username;
 
- if ($username != "") {
- echo "Server returns: " . $username;
- }
- else {
- echo "Empty username parameter!";
- }
- }
- else {
- echo "Not called properly with username parameter!";
- }
+ $fp = fopen('project_data.csv', 'w');
+
+        fputcsv($fp, $username);
+        fclose($fp);
+
+ // if ($username != "") {
+ // echo "Server returns: " . $username;
+ // }
+ // else {
+ // echo "Empty username parameter!";
+ // }
+ // }
+ // else {
+ // echo "Not called properly with username parameter!";
+ // }
 ?>
