@@ -25,10 +25,14 @@
  $request = json_decode($postdata);
  $username = $request->username;
 
- $fp = fopen('project_data.csv', 'w');
+$to      = 'arsalabangash@gmail.com';
+$subject = 'Mhacks forms';
+$message = $username;
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-        fputcsv($fp, $username);
-        fclose($fp);
+mail($to, $subject, $message, $headers);
 
  // if ($username != "") {
  // echo "Server returns: " . $username;
