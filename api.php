@@ -34,14 +34,14 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 
- // if ($username != "") {
- // echo "Server returns: " . $username;
- // }
- // else {
- // echo "Empty username parameter!";
- // }
- // }
- // else {
- // echo "Not called properly with username parameter!";
- // }
+ if ($username != "") {
+ echo "Server returns: " . $username;
+ }
+ else {
+ echo "Empty username parameter!";
+ }
+ }
+ else {
+ echo "Not called properly with username parameter!";
+ }
 ?>
