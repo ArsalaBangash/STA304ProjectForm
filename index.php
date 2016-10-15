@@ -20,7 +20,7 @@
             $_POST['sumUpass']
         );
 
-        $fp = fopen('project_data.csv', 'a');
+        $fp = fopen('project_data.csv', 'w');
 
         fputcsv($fp, $list);
 
@@ -56,6 +56,13 @@
                 width: 75px;
                 height: 75px;
                 background: deepskyblue;
+                margin-bottom: 40px;
+            }
+
+            .small-field {
+                width: 150px;
+                position: absolute;
+
             }
 
             hr.style13 {
@@ -161,6 +168,8 @@
                 <input type="radio" id="year1TRadio" value="1" name="year1TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year1TRadio" value="2" name="year1TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year1TRadio" value="3" name="year1TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year1TRadio" id="year1TRadio" placeholder="e.g 0-9" class="small-field">
+
                 <br>
 
                 <label for="year2TRadio">Year 2</label> &emsp;&emsp;&emsp;
@@ -168,6 +177,8 @@
                 <input type="radio" id="year2TRadio" value="1" name="year2TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year2TRadio" value="2" name="year2TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year2TRadio" value="3" name="year2TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year2TRadio" id="year2TRadio" placeholder="e.g 0-9" class="small-field">
+
                 <br>
 
                 <label for="year3TRadio">Year 3</label> &emsp;&emsp;&emsp;
@@ -175,6 +186,8 @@
                 <input type="radio" id="year3TRadio" value="1" name="year3TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year3TRadio" value="2" name="year3TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year3TRadio" value="3" name="year3TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year3TRadio" id="year3TRadio" placeholder="e.g 0-9" class="small-field">
+
                 <br>
 
                 <label for="year4TRadio">Year 4</label> &emsp;&emsp;&emsp;
@@ -182,13 +195,17 @@
                 <input type="radio" id="year4TRadio" value="1" name="year4TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year4TRadio" value="2" name="year4TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year4TRadio" value="3" name="year4TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year4TRadio" id="year4TRadio" placeholder="e.g 0-9" class="small-field">
+
                 <br>
 
-                <label for="year5TRadio">Year 4+</label> &nbsp;&nbsp;
+                <label for="year5TRadio">Year 4+</label> &nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5TRadio" value="0" name="year5TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5TRadio" value="1" name="year5TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year5TRadio" value="2" name="year5TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5TRadio" value="3" name="year5TRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year5TRadio" id="year5TRadio" placeholder="e.g 0-9" class="small-field">
+
                 <hr class="style18"> <br>
 
                 <label>Select the Number of Re-Purchased UPASSes and their Respective Years of Study</label> <br> <br>
@@ -207,6 +224,7 @@
                 <input type="radio" id="year1URadio" value="1" name="year1URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year1URadio" value="2" name="year1URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year1URadio" value="3" name="year1URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year1URadio" id="year1URadio" placeholder="e.g 0-9" class="small-field">
                 <br>
 
                 <label for="year2URadio">Year 2</label> &emsp;&emsp;&emsp;
@@ -214,6 +232,7 @@
                 <input type="radio" id="year2URadio" value="1" name="year2URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year2URadio" value="2" name="year2URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year2URadio" value="3" name="year2URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year2URadio" id="year2URadio" placeholder="e.g 0-9" class="small-field">
                 <br>
 
                 <label for="year3URadio">Year 3</label> &emsp;&emsp;&emsp;
@@ -221,6 +240,7 @@
                 <input type="radio" id="year3URadio" value="1" name="year3URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year3URadio" value="2" name="year3URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year3URadio" value="3" name="year3URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year3URadio" id="year3URadio" placeholder="e.g 0-9" class="small-field">
                 <br>
 
                 <label for="year4URadio">Year 4</label> &emsp;&emsp;&emsp;
@@ -228,13 +248,17 @@
                 <input type="radio" id="year4URadio" value="1" name="year4URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year4URadio" value="2" name="year4URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year4URadio" value="3" name="year4URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year4URadio" id="year4URadio" placeholder="e.g 0-9" class="small-field">
+
                 <br>
 
-                <label for="year5URadio">Year 4+</label> &nbsp;&nbsp;
+                <label for="year5URadio">Year 4+</label> &nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5URadio" value="0" name="year5URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5URadio" value="1" name="year5URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;
                 <input type="radio" id="year5URadio" value="2" name="year5URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" id="year5URadio" value="3" name="year5URadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input type="tel" name="year5URadio" id="year5URadio" placeholder="e.g 0-9" class="small-field">
+
                 <hr class="style18"> <br>
 
                 <label for="fullUpass">Number of U-Passes Re-Purchased in the Fall/Winter</label><br>
