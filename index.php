@@ -29,7 +29,7 @@
     }
 ?>
 
-<!-- <html>
+<html>
     <head>
 
         <title>STA304</title>
@@ -93,12 +93,12 @@
             }
 
             button {
-                font-family: helvetica, sans-serif;
-                color: snow;
-                padding: 5px 5px 12px 5px;
-                font-size: 40px;
-                border-radius: 5px;
-                border: 1px solid snow;
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
                 width: 500px;
             }
 
@@ -128,12 +128,12 @@
                 <label>Enter your year of Undergraduate Study</label>
                 <br>
                 <br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;
 
-                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">4</label> &emsp;&emsp;&emsp;
+                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">4</label> &emsp;&emsp;&emsp;&emsp;
                 <label for="yearRadio">4+</label> <br>
 
                 <input type="radio" id="yearRadio" value="1" name="yearRadio" class="radioControl">&emsp;&emsp;&nbsp;&nbsp;&nbsp;
@@ -147,11 +147,12 @@
                 <br>
                 <br>
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
-                <label for="yearRadio">0</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;
+                <label for="yearRadio">0</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;&emsp;
                 <label for="yearRadio">3+</label> <br><br>
 
                 <label for="year1TRadio">Year 1</label> &emsp;&emsp;&emsp;
@@ -197,11 +198,12 @@
                 <label>Select the Number of Re-Purchased UPASSes and their Respective Years of Study</label> <br> <br>
 
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
-                <label for="yearRadio">0</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;
-                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;
+                <label for="yearRadio">0</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">1</label> &emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">2</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label for="yearRadio">3</label> &emsp;&emsp;&emsp;&emsp;
                 <label for="yearRadio">3+</label> <br><br>
 
                 <label for="year1URadio">Year 1</label> &emsp;&emsp;&emsp;
@@ -288,185 +290,6 @@
                 year1U + ", " + year2U + ", " + year3U +", " +  year4U +", " +  year5U
                 +", " +  fullU +", " +  summerU)
             });
-        </script>
-    </body>
-</html> -->
-
-<html>
-    <head>
-
-        <title>STA304</title>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-        <style type="text/css">
-
-                    /* Dropdown Button */
-            .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            }
-
-            /* Dropdown button on hover & focus */
-            .dropbtn:hover, .dropbtn:focus {
-            background-color: #3e8e41;
-            }
-
-            /* The container <div> - needed to position the dropdown content */
-            .dropdown {
-            position: relative;
-            display: inline-block;
-            }
-
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            }
-
-            /* Links inside the dropdown */
-            .dropdown-content p {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            }
-
-            /* Change color of dropdown links on hover */
-            .dropdown-content p:hover {background-color: #f1f1f1}
-
-            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-            .show {display:block;}
-
-
-
-            hr.style18:before {
-                display: block;
-                content: "";
-                height: 30px;
-                margin-top: -31px;
-                border-style: solid;
-                border-color: snow;
-                border-width: 0 0 1px 0;
-                border-radius: 20px;
-            }
-
-            .radioControl {
-                color: deepskyblue;
-                top: 2px;
-                left: 0;
-                width: 75px;
-                height: 75px;
-                background: deepskyblue;
-            }
-
-            hr.style13 {
-                height: 10px;
-                border: 0;
-                box-shadow: 0 10px 10px -10px snow inset;
-            }
-
-
-
-            body {
-                background: #00c6ff; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-                font-family: helvetica, sans-serif;
-                font-size: 100%;
-            }
-
-            h3 {
-                font-family: "Liberation Sans";
-                text-align: center;
-                color: snow;
-                font-size: 250%;
-
-
-            }
-
-            input {
-                padding: 5px 5px 12px 5px;
-                font-size: 40px;
-                border-radius: 5px;
-                border: 1px solid snow;
-                width: 500px;
-
-            }
-
-            button {
-                font-family: helvetica, sans-serif;
-                color: snow;
-                padding: 5px 5px 12px 5px;
-                font-size: 40px;
-                border-radius: 5px;
-                border: 1px solid snow;
-                width: 500px;
-            }
-
-            label {
-                font-size: 400%;
-                color: snow;
-            }
-
-            #wrapper {
-                width: 1000px;
-                margin: 0 auto;
-            }
-        </style>
-
-
-
-
-    </head>
-    <body>
-
-        <h3>STA304 PROJECT SURVEY</h3>
-        <hr class="style13">
-
-
-
-        <div id="wrapper">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <p>Link 1</p>
-            <p>Link 2</p>
-            <p>Link 3</p>
-          </div>
-        </div>
-
-        <button type="submit" id="submit" class="dropbtn">Submit Information</button>
-    </div>
-
-        <script type="text/javascript">
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown menu if the user clicks outside of it
-            window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn')) {
-
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                      var openDropdown = dropdowns[i];
-                      if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                      }
-                    }
-                }
-            }
         </script>
     </body>
 </html>
