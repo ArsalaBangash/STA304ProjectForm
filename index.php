@@ -116,6 +116,7 @@
             }
 
             label {
+                float: left;
                 font-size: 200%;
                 color: snow;
             }
