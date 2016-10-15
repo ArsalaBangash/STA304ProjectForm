@@ -36,13 +36,28 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">STA304 Project</h1>
       </ion-header-bar>
       <ion-content ng-controller = "AppCtrl">
         <form name="commentForm" ng-submit="submitForm()">
         <div class="list">
           <!-- <ion-scroll direction="y"> -->
 
+          <ion-list radio-group [(ngModel)]="relationship">
+  <ion-item>
+    <ion-label>Friends</ion-label>
+    <ion-radio value="friends" checked></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Family</ion-label>
+    <ion-radio value="family"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Enemies</ion-label>
+    <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
+  </ion-item>
+</ion-list>
+<!--
           <label class="item item-input item-select">
             <div class="input-label">
               Bus Route
@@ -222,7 +237,7 @@
           <label class="item item-input item-stacked-labe padding-vertical">
            <i class="icon ion-ios-telephone placeholder-icon"></i>
            <input type="tel" placeholder="Telephone Number" name = "phone" ng-model="data.phone">
-         </label>
+         </label> -->
 
          <button class="button button-balanced padding-vertical button-full" type="submit" name="submit" value="Submit to server">
             Submit Form
