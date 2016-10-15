@@ -38,23 +38,38 @@
       <ion-header-bar class="bar-stable">
         <h1 class="title">STA304 Project</h1>
       </ion-header-bar>
-      <ion-content ng-controller = "AppCtrl">
-        <form name="commentForm" ng-submit="submitForm()">
+      <ion-list radio-group [(ngModel)]="autoManufacturers">
 
-          <ion-list radio-group [(ngModel)]="relationship">
-          <ion-item>
-            <ion-label>Friends</ion-label>
-            <ion-radio value="friends" checked></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>Family</ion-label>
-            <ion-radio value="family"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>Enemies</ion-label>
-            <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
-          </ion-item>
-        </ion-list>
+   <ion-list-header>
+     Auto Manufacturers
+   </ion-list-header>
+
+   <ion-item>
+     <ion-label>Cord</ion-label>
+     <ion-radio value="cord"></ion-radio>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Duesenberg</ion-label>
+     <ion-radio value="duesenberg"></ion-radio>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Hudson</ion-label>
+     <ion-radio value="hudson"></ion-radio>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Packard</ion-label>
+     <ion-radio value="packard"></ion-radio>
+   </ion-item>
+
+   <ion-item>
+     <ion-label>Studebaker</ion-label>
+     <ion-radio value="studebaker"></ion-radio>
+   </ion-item>
+
+ </ion-list>
 
          <button class="button button-balanced padding-vertical button-full" type="submit" name="submit" value="Submit to server">
             Submit Form
