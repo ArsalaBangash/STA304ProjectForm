@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content ng-controller = "AppCtrl">
+        <form name="commentForm" ng-submit="submitForm()">
+        <div class="list">
+          <!-- <ion-scroll direction="y"> -->
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Bus Route
+            </div>
+            <select name = "route" ng-model="data.route">
+              <option>07 - Cadillac-Harper (Inbound)</option>
+              <option>07 - Cadillac-Harper (Outbound)</option>
+              <option>08 - Caniff (Eastbound)</option>
+              <option>08 - Caniff (Westbound)</option>
+              <option>09 - Chalmers (Northbound)</option>
+              <option>09 - Chalmers (Southbound)</option>
+              <option>10 - Chene (Inbound)</option>
+              <option>10 - Chene (Outbound)</option>
+              <option>11 - Clairmount (Eastbound)</option>
+              <option>11 - Clairmount (Westbound)</option>
+              <option>12 - Connant (Northbound)</option>
+              <option>12 - Connant (Southbound)</option>
+              <option>13 - Conner (Northbound)</option>
+              <option>13 - Conner (Southbound)</option>
+              <option>14 - Crosstown (Eastbound)</option>
+              <option>14 - Crosstown (Westbound)</option>
+              <option>15 - Chicago-Davidson (Eastbound)</option>
+              <option>15 - Chicago-Davidson (Westbound)</option>
+              <option>16 - Dexter (Inbound)</option>
+              <option>16 - Dexter (Outbound)</option>
+              <option>17 - Eight Mile (Eastbound)</option>
+              <option>17 - Eight Mile (Westbound)</option>
+              <option>18 - Fenkell (Inbound)</option>
+              <option>18 - Fenkell (Outbound)</option>
+              <option>19 - Fort (Eastbound)</option>
+              <option>19 - Fort (Westbound)</option>
+              <option>21 - Grand River (Inbound)</option>
+              <option>21 - Grand River (Outbound)</option>
+              <option>22 - Greenfield (Northbound)</option>
+              <option>22 - Greenfield (Southbound)</option>
+              <option>23 - Hamilton (Inbound)</option>
+              <option>23 - Hamilton (Outbound)</option>
+              <option>25 - Jefferson (Inbound)</option>
+              <option>25 - Jefferson (Outbound)</option>
+              <option>29 - Linwood (Inbound)</option>
+              <option>29 - Linwood (Outbound)</option>
+              <option>30 - Livernois (Northbound)</option>
+              <option>30 - Livernois (Southbound)</option>
+              <option>31 - Mack (Inbound)</option>
+              <option>31 - Mack (Outbound)</option>
+              <option>32 - McNichols (Eastbound)</option>
+              <option>32 - McNichols (Westbound)</option>
+              <option>34 - Gratiot (Inbound)</option>
+              <option>34 - Gratiot (Outbound)</option>
+              <option>36 - Oakland (Inbound)</option>
+              <option>36 - Oakland (Outbound)</option>
+              <option>37 - Michigan (Inbound)</option>
+              <option>37 - Michigan (Outbound)</option>
+              <option>38 - Plymouth (Inbound)</option>
+              <option>38 - Plymouth (Outbound)</option>
+              <option>39 - Puritan (Eastbound)</option>
+              <option>39 - Puritan (Westbound)</option>
+              <option>40 - Russell (Inbound)</option>
+              <option>40 - Russell (Outbound)</option>
+              <option>41 - Schaefer (Northbound)</option>
+              <option>41 - Schaefer (Southbound)</option>
+              <option>43 - Schoolcraft (Eastbound)</option>
+              <option>43 - Schoolcraft (Westbound)</option>
+              <option>45 - Seven Mile (Eastbound)</option>
+              <option>45 - Seven Mile (Westbound)</option>
+              <option>46 - Southfield (Northbound)</option>
+              <option>46 - Southfield (Southbound)</option>
+              <option>47 - Tireman (Inbound)</option>
+              <option>47 - Tireman (Outbound)</option>
+              <option>48 - Van Dyke-Lafayette (Inbound)</option>
+              <option>48 - Van Dyke-Lafayette (Outbound)</option>
+              <option>49 - Vernor (Inbound)</option>
+              <option>49 - Vernor (Outbound)</option>
+              <option>53 - Woodward (Inbound)</option>
+              <option>53 - Woodward (Outbound)</option>
+              <option>54 - Wyoming (Northbound)</option>
+              <option>54 - Wyoming (Southbound)</option>
+              <option>60 - Evergreen (Northbound)</option>
+              <option>60 - Evergreen (Southbound)</option>
+              <option>76 - Hayes Limited (Inbound)</option>
+              <option>76 - Hayes Limited (Outbound)</option>
+              <option>78 - Imperial Limited (Inbound)</option>
+              <option>78 - Imperial Limited (Outbound)</option>
+              <option>Not Applicable</option>
+            </select>
+          </label>
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Date</span>
+            <input type="date" name = "date" ng-model="data.date">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Time</span>
+            <input type="time" name = "time" ng-model="data.time">
+          </label>
+
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Location</span>
+            <input type="text" name = "location" ng-model="data.location">
+          </label>
+
+          <label class="item item-input item-select item-stacked-label">
+            <div class="input-label">
+              Category
+            </div>
+            <select name = "category" ng-model="data.category">
+              <option>ADA Wheelchair</option>
+              <option>Bus Condition Int/Ext Cleanliness</option>
+              <option>Bus Condition Int/Ext Repair</option>
+              <option>Bus Personnel Security</option>
+              <option>Bus Shelter Repair</option>
+              <option>Bus Shelter Replace</option>
+              <option>Bus Stop / Shelter Clean</option>
+              <option>Bus Stop / Shelter Condition</option>
+              <option>Bus Stop / Shelter Install</option>
+              <option>Bus Stop / Shelter Removal</option>
+              <option>Commendation</option>
+              <option>Complaint: Bus Accident</option>
+              <option>Complaint: Bus Stop Condition</option>
+              <option>Complaint: Discourteous Driver</option>
+              <option>Complaint: Eating / Drinking / Smoking</option>
+              <option>Complaint: Fare Dispute</option>
+              <option>Complaint: Handicap</option>
+              <option>Complaint: Paratransit Service</option>
+              <option>Complaint: Passenger Carried Past Stop</option>
+              <option>Complaint: Passenger Incident</option>
+              <option>Complaint: Passenger Passed Up</option>
+              <option>Complaint: Reckless Driving</option>
+              <option>Complaint: Scheduled Service</option>
+              <option>Complaint: Service Employee</option>
+              <option>Complaint:</option>
+              <option>General Comments</option>
+            </select>
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">Comments / Details:</span>
+            <input type="text" name = "comments" ng-model="data.comments">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">Email</span>
+            <input type="email" placeholder="example@domain.com" name = "email" ng-model="data.email">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="First and Last Name" name = "name" ng-model="data.name">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">Address</span>
+            <input type="text" placeholder="Line 1" name = "line1" ng-model="data.line1">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label"></span>
+            <input type="text" placeholder="Line 2" name = "line2" ng-model="data.line2">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">City</span>
+            <input type="text" placeholder="Enter City" name = "city" ng-model="data.city">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">State</span>
+            <input type="text" placeholder="Enter State" name = "state" ng-model="data.state">
+          </label>
+
+          <label class="item item-input item-stacked-label padding-vertical">
+            <span class="input-label">Zip-Code</span>
+            <input type="tel" placeholder="12345" name = "zip" ng-model="data.zip">
+          </label>
+
+          <label class="item item-input item-stacked-labe padding-vertical">
+           <i class="icon ion-ios-telephone placeholder-icon"></i>
+           <input type="tel" placeholder="Telephone Number" name = "phone" ng-model="data.phone">
+         </label>
+
+         <button class="button button-balanced padding-vertical button-full" type="submit" name="submit" value="Submit to server">
+            Submit Form
+         </button>
+
+       </form>
+     <!-- </ion-scroll> -->
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
