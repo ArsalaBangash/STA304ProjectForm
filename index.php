@@ -66,8 +66,8 @@
                 color: deepskyblue;
                 top: 2px;
                 left: 0;
-                width: 50px;
-                height: 50px;
+                width: 75px;
+                height: 75px;
                 background: deepskyblue;
             }
 
@@ -116,7 +116,6 @@
             }
 
             label {
-                float: left;
                 font-size: 200%;
                 color: snow;
             }
@@ -261,13 +260,13 @@
                 <hr class="style18"> <br>
 
                 <label for="fullUpass">Number of U-Passes Re-Purchased in the Fall/Winter</label><br>
-                <input type="text" name="fullUpass" id="fullUpass" placeholder="e.g 0-9">
+                <input type="tel" name="fullUpass" id="fullUpass" placeholder="e.g 0-9">
                 <br>
                 <hr class="style18">
                 <br>
 
                 <label for="sumUpass">Number of U-Passes Re-Purchased in the Summer</label><br>
-                <input type="text" name="sumUpass" id="sumUpass" placeholder="e.g 0-9">
+                <input type="tel" name="sumUpass" id="sumUpass" placeholder="e.g 0-9">
                 <br>
                 <hr class="style18">
                 <br>
