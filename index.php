@@ -26,19 +26,6 @@
 
 
         fclose($fp);
-        // $list = array (
-        // array('aaa', 'bbb', 'ccc', 'dddd'),
-        // array('123', '456', '789'),
-        // array('"aaa"', '"bbb"')
-        // );
-        //
-        // $fp = fopen('file.csv', 'a');
-        //
-        // foreach ($list as $fields) {
-        //     fputcsv($fp, $fields);
-        // }
-        //
-        // fclose($fp);
     }
 ?>
 
@@ -116,7 +103,7 @@
             }
 
             label {
-                font-size: 200%;
+                font-size: 400%;
                 color: snow;
             }
 
