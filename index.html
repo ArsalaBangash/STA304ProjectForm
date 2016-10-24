@@ -23,213 +23,330 @@
         <div ng-controller="AppCtrl">
             <form class="form-horizontal" role="form" ng-submit="submitForm()">
                 <fieldset>
-                    <legend>Year of Study</legend>
+
+                    <legend>Please Select Your Year of Study</legend>
                     <div class="form-group" class="container">
                         <div class="stuff">
-                            <select class="selectpicker" name = "yearOfStudy" ng-model="data.yearOfStudy">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option value="5">4+</option>
-                          </select>
-					  </div><br>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.yearOfStudy" value="1">
+						    1
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.yearOfStudy" value="2">
+						    2
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.yearOfStudy" value="3">
+						    3
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.yearOfStudy" value="4">
+						    4
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.yearOfStudy" value="5">
+						    4+
+						  </label><br/>
                     </div>
+				</div>
 
+					<legend>How Many Days a Week do You Come to UTM</legend>
+                    <div class="form-group" class="container">
+                        <div class="stuff">
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.days" value="1">
+						    1
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.days" value="2">
+						    2
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.days" value="3">
+						    3
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.days" value="4">
+						    4
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.days" value="5">
+						    5
+						  </label><br/>
+                    </div>
+				</div>
+
+					<legend>Do You Drive to UTM?</legend>
+					<div class="form-group" class="container">
+                        <div class="stuff">
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.drive" value="1">
+						    YES
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.drive" value="0">
+						    NO
+						  </label>
+                    	</div>
+					</div>
+
+					<legend>Do you keep your T-Card separately from your U-Pass?</legend>
+					<div class="form-group" class="container">
+                        <div class="stuff">
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.separate" value="1">
+						    YES
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.separate" value="0">
+						    NO
+						  </label>
+                    	</div>
+					</div>
+
+					<legend>Do You Live Off Campus?</legend>
+					<div class="form-group" class="container">
+                        <div class="stuff">
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.offCampus" value="1">
+						    YES
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.offCampus" value="0">
+						    NO
+						  </label>
+                    	</div>
+					</div>
+
+					<legend>Do you use your T-Card to make purchases on campus?</legend>
+					<div class="form-group" class="container">
+                        <div class="stuff">
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.purchases" value="1">
+						    YES
+						  </label>
+						  <label class="h1" id="styling">
+						    <input type="radio" class="btn-circle" ng-model="data.purchases" value="0">
+						    NO
+						  </label>
+                    	</div>
+					</div>
+
+					<div ng-show="data.yearOfStudy >= 1">
 					<legend>T Cards Lost in 1st Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year1T" ng-model="data.year1T">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year1T" ng-model="data.year1T"  ng-init="data.year1T = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>T Cards Lost in 2nd Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year2T" ng-model="data.year2T">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 2">
+						<legend>T Cards Lost in 2nd Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year2T" ng-model="data.year2T" ng-init="data.year2T = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>T Cards Lost in 3rd Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year3T" ng-model="data.year3T">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 3">
+						<legend>T Cards Lost in 3rd Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year3T" ng-model="data.year3T" ng-init="data.year3T = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>T Cards Lost in 4th Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year4T" ng-model="data.year4T">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 4">
+						<legend>T Cards Lost in 4th Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year4T" ng-model="data.year4T" ng-init="data.year4T = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>T Cards Lost in All Subsequent Years</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year5T" ng-model="data.year5T">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 5">
+						<legend>T Cards Lost in All Subsequent Years</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year5T" ng-model="data.year5T" ng-init="data.year5T = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>U Passes Lost in 1st Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year1U" ng-model="data.year1U">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>9</option>
-                              <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 1">
+						<legend>U Passes Lost in 1st Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year1U" ng-model="data.year1U" ng-init="data.year1U = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>U Passes Lost in 2nd Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year2U" ng-model="data.year2U">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>9</option>
-                              <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 2">
+						<legend>U Passes Lost in 2nd Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year2U" ng-model="data.year2U" ng-init="data.year2U = '0'">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>9</option>
+									<option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>U Passes Lost in 3rd Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year3U" ng-model="data.year3U">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>9</option>
-                              <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
 
-					<legend>U Passes Lost in 4th Year</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year4U" ng-model="data.year4U">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>9</option>
-                              <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 3">
+						<legend>U Passes Lost in 3rd Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year3U" ng-model="data.year3U" ng-init="data.year3U = '0'">
+									<option>0</option>
+	    							  <option>1</option>
+	    							  <option>2</option>
+	    							  <option>3</option>
+	    							  <option>4</option>
+	    							  <option>5</option>
+	    							  <option>6</option>
+	    							  <option>7</option>
+	    							  <option>9</option>
+	    							  <option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
-					<legend>U Passes Lost in All Subsequent Years</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" name = "year5U" ng-model="data.year5U">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>9</option>
-                              <option>10</option>
-                          </select>
-					  </div><br>
-                    </div>
+					<div ng-show="data.yearOfStudy >= 4">
+						<legend>U Passes Lost in 4th Year</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year4U" ng-model="data.year4U" ng-init="data.year4U = '0'">
+								  <option>0</option>
+  	  							  <option>1</option>
+  	  							  <option>2</option>
+  	  							  <option>3</option>
+  	  							  <option>4</option>
+  	  							  <option>5</option>
+  	  							  <option>6</option>
+  	  							  <option>7</option>
+  	  							  <option>9</option>
+  	  							  <option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
+
+					<div ng-show="data.yearOfStudy >= 5">
+						<legend>U Passes Lost in All Subsequent Years</legend>
+	                    <div class="form-group" class="container">
+	                        <div class="stuff">
+	                            <select class="selectpicker" name = "year5U" ng-model="data.year5U" ng-init="data.year5U = '0'">
+									<option>0</option>
+	    							  <option>1</option>
+	    							  <option>2</option>
+	    							  <option>3</option>
+	    							  <option>4</option>
+	    							  <option>5</option>
+	    							  <option>6</option>
+	    							  <option>7</option>
+	    							  <option>9</option>
+	    							  <option>10</option>
+	                          </select>
+						  </div><br>
+	                    </div>
+					</div>
 
 					<legend>U Passes Lost in the Fall/Winter Term</legend>
                     <div class="form-group" class="container">
                         <div class="stuff">
                             <select class="selectpicker" name = "fullU" ng-model="data.fullU">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
+							  <option>0</option>
+  							  <option>1</option>
+  							  <option>2</option>
+  							  <option>3</option>
+  							  <option>4</option>
+  							  <option>5</option>
+  							  <option>6</option>
+  							  <option>7</option>
+  							  <option>9</option>
+  							  <option>10</option>
                           </select>
 					  </div><br>
                     </div>
@@ -238,16 +355,16 @@
 					<div class="form-group" class="container">
 						<div class="stuff">
 							<select class="selectpicker" name = "summU" ng-model="data.summU">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>9</option>
-                                <option>10</option>
+							  <option>0</option>
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							  <option>6</option>
+							  <option>7</option>
+							  <option>9</option>
+							  <option>10</option>
 						  </select>
 					  </div><br>
 					</div>
