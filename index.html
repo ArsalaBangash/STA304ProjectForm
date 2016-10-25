@@ -20,7 +20,7 @@
 
         <h1>STA304 Project</h1><br>
 
-        <div ng-controller="AppCtrl">
+        <div id="wrapper" ng-controller="AppCtrl">
             <form class="form-horizontal" role="form" ng-submit="submitForm()">
                 <fieldset>
 
@@ -136,7 +136,7 @@
 					<legend>T Cards Lost in 1st Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year1T" ng-model="data.year1T"  ng-init="data.year1T = '0'">
+	                            <select class="selectpicker" data-style="btn-primary" name = "year1T" ng-model="data.year1T"  ng-init="data.year1T = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -156,7 +156,7 @@
 						<legend>T Cards Lost in 2nd Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year2T" ng-model="data.year2T" ng-init="data.year2T = '0'">
+	                            <select class="selectpicker" data-style="btn-info" name = "year2T" ng-model="data.year2T" ng-init="data.year2T = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -176,7 +176,7 @@
 						<legend>T Cards Lost in 3rd Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year3T" ng-model="data.year3T" ng-init="data.year3T = '0'">
+	                            <select class="selectpicker" data-style="btn-success" name = "year3T" ng-model="data.year3T" ng-init="data.year3T = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -196,7 +196,7 @@
 						<legend>T Cards Lost in 4th Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year4T" ng-model="data.year4T" ng-init="data.year4T = '0'">
+	                            <select class="selectpicker" data-style="btn-warning" name = "year4T" ng-model="data.year4T" ng-init="data.year4T = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -216,7 +216,7 @@
 						<legend>T Cards Lost in All Subsequent Years</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year5T" ng-model="data.year5T" ng-init="data.year5T = '0'">
+	                            <select class="selectpicker" data-style="btn-danger" name = "year5T" ng-model="data.year5T" ng-init="data.year5T = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -236,7 +236,7 @@
 						<legend>U Passes Lost in 1st Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year1U" ng-model="data.year1U" ng-init="data.year1U = '0'">
+	                            <select class="selectpicker" data-style="btn-primary" name = "year1U" ng-model="data.year1U" ng-init="data.year1U = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -256,7 +256,7 @@
 						<legend>U Passes Lost in 2nd Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year2U" ng-model="data.year2U" ng-init="data.year2U = '0'">
+	                            <select class="selectpicker" data-style="btn-info" name = "year2U" ng-model="data.year2U" ng-init="data.year2U = '0'">
 									<option>0</option>
 									<option>1</option>
 									<option>2</option>
@@ -277,7 +277,7 @@
 						<legend>U Passes Lost in 3rd Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year3U" ng-model="data.year3U" ng-init="data.year3U = '0'">
+	                            <select class="selectpicker" data-style="btn-success" name = "year3U" ng-model="data.year3U" ng-init="data.year3U = '0'">
 									<option>0</option>
 	    							  <option>1</option>
 	    							  <option>2</option>
@@ -297,7 +297,7 @@
 						<legend>U Passes Lost in 4th Year</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year4U" ng-model="data.year4U" ng-init="data.year4U = '0'">
+	                            <select class="selectpicker" data-style="btn-warning" name = "year4U" ng-model="data.year4U" ng-init="data.year4U = '0'">
 								  <option>0</option>
   	  							  <option>1</option>
   	  							  <option>2</option>
@@ -317,7 +317,7 @@
 						<legend>U Passes Lost in All Subsequent Years</legend>
 	                    <div class="form-group" class="container">
 	                        <div class="stuff">
-	                            <select class="selectpicker" name = "year5U" ng-model="data.year5U" ng-init="data.year5U = '0'">
+	                            <select class="selectpicker" data-style="btn-danger" name = "year5U" ng-model="data.year5U" ng-init="data.year5U = '0'">
 									<option>0</option>
 	    							  <option>1</option>
 	    							  <option>2</option>
@@ -336,7 +336,7 @@
 					<legend>U Passes Lost in the Fall/Winter Term</legend>
                     <div class="form-group" class="container">
                         <div class="stuff">
-                            <select class="selectpicker" name = "fullU" ng-model="data.fullU">
+                            <select class="selectpicker" data-style="btn-primary" name = "fullU" ng-model="data.fullU">
 							  <option>0</option>
   							  <option>1</option>
   							  <option>2</option>
@@ -354,7 +354,7 @@
 					<legend>U Passes Lost in the Summer Term</legend>
 					<div class="form-group" class="container">
 						<div class="stuff">
-							<select class="selectpicker" name = "summU" ng-model="data.summU">
+							<select class="selectpicker" data-style="btn-danger" name = "summU" ng-model="data.summU">
 							  <option>0</option>
 							  <option>1</option>
 							  <option>2</option>

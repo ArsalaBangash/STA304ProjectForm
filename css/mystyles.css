@@ -7,10 +7,13 @@
         cursor: pointer;
         width: 300px;
         height: 50px;
+
     }
 
 .stuff {
-    margin-left: 25px
+    margin-left: 25px;
+    color: #EBEBEB;
+
 }
 
 .btn-circle {
@@ -26,4 +29,8 @@
 #styling {
 	color: #17c762;
 	padding-left: 50px;
+}
+
+#wrapper {
+    width: 600px;
 }
