@@ -1,7 +1,7 @@
 
 var app1 = angular.module('app1', []);
 
-app1.controller('AppCtrl', function($scope, $http) {
+app1.controller('AppCtrl', function($scope, $http, $window) {
    $scope.data = {};
 
    $scope.submitForm = function(){
@@ -11,5 +11,6 @@ app1.controller('AppCtrl', function($scope, $http) {
        .then(function (res){
            $scope.response = res.data;
        });
+       $window.location.reload();
    };
 });
