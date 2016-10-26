@@ -11,6 +11,20 @@ app1.controller('AppCtrl', function($scope, $http, $window) {
        .then(function (res){
            $scope.response = res.data;
        });
-       $window.location.reload();
+       var fullU = parseInt($scope.data.fullU, 10);
+       var summU = parseInt($scope.data.summU, 10);
+       var year1U = parseInt($scope.data.year1U, 10);
+       var year2U = parseInt($scope.data.year2U, 10);
+       var year3U = parseInt($scope.data.year3U, 10);
+       var year4U = parseInt($scope.data.year4U, 10);
+       var year5U = parseInt($scope.data.year5U, 10);
+       var totalU = year1U + year2U + year3U + year4U + year5U;
+       var totalTerms = fullU + summU;
+
+       if (totalTerms != totalU) {
+           $window.alert("Please revise your Upass Data");
+       } else {
+           $window.location.reload();
+       }
    };
 });

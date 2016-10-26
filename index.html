@@ -333,42 +333,46 @@
 	                    </div>
 					</div>
 
-					<legend>U Passes Lost in the Fall/Winter Term</legend>
-                    <div class="form-group" class="container">
-                        <div class="stuff">
-                            <select class="selectpicker" data-style="btn-primary" name = "fullU" ng-model="data.fullU">
-							  <option>0</option>
-  							  <option>1</option>
-  							  <option>2</option>
-  							  <option>3</option>
-  							  <option>4</option>
-  							  <option>5</option>
-  							  <option>6</option>
-  							  <option>7</option>
-  							  <option>9</option>
-  							  <option>10</option>
-                          </select>
-					  </div><br>
+                    <div ng-show="data.year1U != 0 || data.year2U != 0 || data.year3U != 0 || data.year4U != 0 || data.year5U != 0">
+    					<legend>U Passes Lost in the Fall/Winter Term</legend>
+                        <div class="form-group" class="container">
+                            <div class="stuff">
+                                <select class="selectpicker" data-style="btn-primary" name = "fullU" ng-model="data.fullU" ng-init="data.fullU = '0'">
+    							  <option>0</option>
+      							  <option>1</option>
+      							  <option>2</option>
+      							  <option>3</option>
+      							  <option>4</option>
+      							  <option>5</option>
+      							  <option>6</option>
+      							  <option>7</option>
+      							  <option>9</option>
+      							  <option>10</option>
+                              </select>
+    					  </div><br>
+                        </div>
                     </div>
 
-					<legend>U Passes Lost in the Summer Term</legend>
-					<div class="form-group" class="container">
-						<div class="stuff">
-							<select class="selectpicker" data-style="btn-danger" name = "summU" ng-model="data.summU">
-							  <option>0</option>
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
-							  <option>6</option>
-							  <option>7</option>
-							  <option>9</option>
-							  <option>10</option>
-						  </select>
-					  </div><br>
-					</div>
 
+                    <div ng-show="data.year1U != 0 || data.year2U != 0 || data.year3U != 0 || data.year4U != 0 || data.year5U != 0">
+    					<legend>U Passes Lost in the Summer Term</legend>
+    					<div class="form-group" class="container">
+    						<div class="stuff">
+    							<select class="selectpicker" data-style="btn-danger" name = "summU" ng-model="data.summU" ng-init="data.summU = '0'">
+    							  <option>0</option>
+    							  <option>1</option>
+    							  <option>2</option>
+    							  <option>3</option>
+    							  <option>4</option>
+    							  <option>5</option>
+    							  <option>6</option>
+    							  <option>7</option>
+    							  <option>9</option>
+    							  <option>10</option>
+    						  </select>
+    					  </div><br>
+    					</div>
+                    </div>
 
 
                 </fieldset>
