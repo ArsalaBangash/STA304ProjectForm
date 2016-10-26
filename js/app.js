@@ -24,6 +24,7 @@ app1.controller('AppCtrl', function($scope, $http, $window) {
        if (totalTerms != totalU) {
            $window.alert("Please revise your Upass Data");
        } else {
+           $window.alert("Data Successfully submitted, Please reload");
            $window.location.reload();
        }
    };
