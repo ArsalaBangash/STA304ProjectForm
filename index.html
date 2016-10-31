@@ -376,7 +376,7 @@
 
 
                 </fieldset>
-                <input type="submit" class="button" value="Submit" />
+                <input type="submit" ng-value="started? 'Submit' : 'Thank You!'" ng-class="started ? 'buttonRed' : 'buttonGreen'"/>
             </form>
         </div>
 

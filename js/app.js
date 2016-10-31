@@ -3,8 +3,10 @@ var app1 = angular.module('app1', []);
 
 app1.controller('AppCtrl', function($scope, $http, $window) {
    $scope.data = {};
+   $scope.started = true;
 
    $scope.submitForm = function(){
+       $scope.started = false;
        var fullU = parseInt($scope.data.fullU, 10);
        var summU = parseInt($scope.data.summU, 10);
        var year1U = parseInt($scope.data.year1U, 10);
