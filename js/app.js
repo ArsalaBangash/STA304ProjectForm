@@ -25,8 +25,8 @@ app1.controller('AppCtrl', function($scope, $http, $window) {
            .then(function (res){
                $scope.response = res.data;
            });
-           $window.alert("Data Successfully submitted, Please reload");
-           $window.location.reload();
+        //    $window.alert("Data Successfully submitted, Please reload");
+        //    $window.location.reload();
        }
    };
 });
